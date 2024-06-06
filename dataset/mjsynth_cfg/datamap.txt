@@ -1,0 +1,13 @@
+"dataset\mjsynth_cfg\all.k00.txt" b3727896ebba35e1ec285bf33fba3031 524288000
+"dataset\mjsynth_cfg\all.k01.txt" e3ff8ec657300db7689f5cd5837a175a 113692154
+"dataset\mjsynth_cfg\all.kmerge.txt" d70e3080872177a5368461b63ddc6a1f 315
+"dataset\mjsynth_cfg\all.txt" c99f670be1c4899ea30fbb728fbb7112 637980154
+"dataset\mjsynth_cfg\annotation.txt" bd1db05bde6b66d18c553339e7db8a89 332428670
+"dataset\mjsynth_cfg\annotation_test.txt" 2256ec3dc752dbf62e8a5883ea6ca6e4 33570354
+"dataset\mjsynth_cfg\annotation_train.txt" c83a5021fbc0a27408f071cbc9cb2586 268639950
+"dataset\mjsynth_cfg\annotation_val.txt" 8a53f0a713eaa2889b81588afd1f6e8f 30218366
+"dataset\mjsynth_cfg\imlist.txt" 48768f88dc6ec380228d3e64a637f583 280038809
+"dataset\mjsynth_cfg\lexicon.txt" fe04e0d938324a63b32c9e621cdb891c 814889
+"dataset\mjsynth_cfg\test.txt" 0d01af5699593b4a55f1f09d1fad936f 64125129
+"dataset\mjsynth_cfg\train.txt" c7016a655257dd814bf77cd75d2e1ce4 516133984
+"dataset\mjsynth_cfg\val.txt" 7cac8a5125ca10116540c211fb415719 57721037

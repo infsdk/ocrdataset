@@ -4,4 +4,4 @@
 *.txt
 *.json
 *.DS_Store
-gt.mat
+*.mat
