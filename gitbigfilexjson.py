@@ -140,8 +140,7 @@ I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\mlt2019\datamap.txt
 I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\MTWI2018\datamap.txt
 I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\ReCTS\datamap.txt
 I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\SROIE2019\datamap.txt
-I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\SynthText800k\datamap.txt
-I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\Art\datamap.txt.md5.txt"""
+I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\SynthText800k\datamap.txt"""
 
 def mainidx(idxfile):
     idxdir = os.path.dirname(idxfile)
@@ -188,10 +187,12 @@ def mainidx(idxfile):
     }
     writefileJson(os.path.join(idxdir, "gitbigfilex.json"), fjson)
     print(fjson["mynote"])
-        
+
 def main():
     idxlist = page.strip().split("\n")
-    for idxfile in idxlist:
+    for idx, idxfile in enumerate(idxlist):
+        # echo 你好，世界 > C:\path\to\file.txt
+        print("echo", idx, idxfile, ">", "mytask.txt")
         mainidx(idxfile)
 
 if __name__ == "__main__":

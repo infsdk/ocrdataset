@@ -1,0 +1,33 @@
+{
+  "autopinyin": true,
+  "copylist": [],
+  "copylist_note": "上传前，须要拷贝的文件列表，每个的格式是：['fromfile', 'tofile']。",
+  "datamaplist": [
+    "dataset\\mjsynth\\imgs\\2401~2450\\datamap.txt"
+  ],
+  "ftpconfig": {
+    "host": "10.12.172.128",
+    "pass": "35218764",
+    "pypass_upload": "OCRDATA_FTP_PASS_KEY",
+    "user": "ftp_readonly",
+    "user_upload": "ftp_readwrite"
+  },
+  "generate_listfile": true,
+  "generate_versionfile": true,
+  "gitremote": "data_for_ai",
+  "gitremote_note": "远程根目录 'data_for_ai'。",
+  "mainfile": "dataset\\mjsynth\\imgs\\2401~2450\\datamap.txt",
+  "mainroot": "..\\..",
+  "mynote": "I: & cd I:\\ocr_data\\所有数据集一起压缩\\merge\\merge~ & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /NoTipInfo /NoCheckFile dataset\\mjsynth\\imgs\\2401~2450",
+  "others": [],
+  "submit_dir": "dataset_mjsynth_imgs_2401~2450",
+  "timeout": 365,
+  "timeout_note": "自动清理 365 天前的文件。",
+  "timeout_reserved": 10000,
+  "timeout_reserved_note": "不会清理最新的 10000 个文件夹（保底保留文件夹个数）。",
+  "upload": {
+    "comment": "这个节点是程序自动维护的，不要修改。上面的 'others' 字段支持配置文件夹。",
+    "count": 55636,
+    "others": []
+  }
+}
