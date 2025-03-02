@@ -5,3 +5,7 @@
 *.json
 *.DS_Store
 *.mat
+tempdir
+/version
+/datamap.txt
+/version.txt
