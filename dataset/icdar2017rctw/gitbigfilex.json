@@ -19,7 +19,7 @@
   "gitremote_note": "远程根目录 'data_for_ai'。",
   "mainfile": "dataset\\icdar2017rctw\\datamap.txt",
   "mainroot": "..\\..",
-  "mynote": "I: & cd I:\\ocr_data\\所有数据集一起压缩\\merge\\merge~ & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /NoTipInfo /NoCheckFile dataset\\icdar2017rctw",
+  "mynote": "I: & cd I:\\ocr_data\\所有数据集一起压缩\\merge\\merge~ & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /FirstUpload /QuickUpload /IndexOnly /NoTipInfo /NoCheckFile dataset\\icdar2017rctw",
   "others": [],
   "submit_dir": "dataset_icdar2017rctw",
   "timeout": 365,

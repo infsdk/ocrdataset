@@ -171,8 +171,8 @@ def mainidx(idxfile):
       "gitremote": "data_for_ai",
       "gitremote_note": "远程根目录 'data_for_ai'。",
       "mainfile": f"{reldir}\\datamap.txt",
-      "mainroot": "..\\..",
-      "mynote": f"I: & cd {gitroot} & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /NoTipInfo /NoCheckFile {reldir}",
+      "mainroot": reldirb,
+      "mynote": f"I: & cd {gitroot} & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /FirstUpload /QuickUpload /IndexOnly /NoTipInfo /NoCheckFile {reldir}",
       "others": [],
       "submit_dir": submit_dir,
       "timeout": 365,
@@ -185,29 +185,37 @@ def mainidx(idxfile):
         "others": []
       }
     }
+    
+    cdx, mynote = fjson["mynote"].split(" & python3 ")
+    print(cdx.replace("\\", "/"))
+    print("call", "python3", mynote.replace("\\", "/"))
+    
+    fjsonx = fjson
+    
     fjsonfile = os.path.join(idxdir, "gitbigfilex.json")
     if os.path.exists(fjsonfile):
         fjson = readfileJson(fjsonfile)
+        fjson["mainroot"] = fjsonx["mainroot"]
+        fjson["mynote"] = fjsonx["mynote"]
         # "filemd5_cachesize": 100000,
         xsize_src = len(readfile(idxfile, True).split("\n"))
         xsize_ctrl = (xsize_src // 1000 + 1) * 1000
         if xsize_ctrl < 10000:
             xsize_ctrl = 10000
-        print(xsize_src, xsize_ctrl)
+        #print(xsize_src, xsize_ctrl)
         assert xsize_src < xsize_ctrl
         fjson["filemd5_cachesize"] = xsize_ctrl
     writefileJson(fjsonfile, fjson)
-    print(fjson["mynote"])
 
 def main():
     idxlist = page.strip().split("\n")
     for idx, idxfile in enumerate(idxlist):
         # echo 你好，世界 > C:\path\to\file.txt
-        print("echo", idx, idxfile, ">", "mytask.txt")
+        print("echo", idx, idxfile.replace("\\", "/"), ">", "mytask.txt")
         mainidx(idxfile)
 
 # git@github.com:infsdk/ocrdataset.git
 # python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /FirstUpload /QuickUpload /NoTipInfo /NoCheckFile dataset\\Art
 if __name__ == "__main__":
     main()
-    print("ok")
+    print("echo", "ok")

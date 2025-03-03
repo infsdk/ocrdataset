@@ -19,7 +19,7 @@
   "gitremote_note": "远程根目录 'data_for_ai'。",
   "mainfile": "dataset\\Art\\datamap.txt",
   "mainroot": "..\\..",
-  "mynote": "I: & cd I:\\ocr_data\\所有数据集一起压缩\\merge\\merge~ & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /NoTipInfo /NoCheckFile dataset\\Art",
+  "mynote": "I: & cd I:\\ocr_data\\所有数据集一起压缩\\merge\\merge~ & python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /FirstUpload /QuickUpload /IndexOnly /NoTipInfo /NoCheckFile dataset\\Art",
   "others": [],
   "submit_dir": "dataset_Art",
   "timeout": 365,
