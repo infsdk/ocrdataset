@@ -188,6 +188,14 @@ def mainidx(idxfile):
     fjsonfile = os.path.join(idxdir, "gitbigfilex.json")
     if os.path.exists(fjsonfile):
         fjson = readfileJson(fjsonfile)
+        # "filemd5_cachesize": 100000,
+        xsize_src = len(readfile(idxfile, True).split("\n"))
+        xsize_ctrl = (xsize_src // 1000 + 1) * 1000
+        if xsize_ctrl < 10000:
+            xsize_ctrl = 10000
+        print(xsize_src, xsize_ctrl)
+        assert xsize_src < xsize_ctrl
+        fjson["filemd5_cachesize"] = xsize_ctrl
     writefileJson(fjsonfile, fjson)
     print(fjson["mynote"])
 

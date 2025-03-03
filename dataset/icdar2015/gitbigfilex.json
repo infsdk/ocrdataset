@@ -5,7 +5,7 @@
   "datamaplist": [
     "dataset\\icdar2015\\datamap.txt"
   ],
-  "filemd5_cachesize": 100000,
+  "filemd5_cachesize": 10000,
   "ftpconfig": {
     "host": "10.12.172.128",
     "pass": "35218764",
