@@ -15,6 +15,7 @@
   },
   "generate_listfile": true,
   "generate_versionfile": true,
+  "generate_versionzipfile": true,
   "gitremote": "data_for_ai",
   "gitremote_note": "远程根目录 'data_for_ai'。",
   "mainfile": "dataset\\mjsynth\\imgs\\2351~2400\\datamap.txt",
