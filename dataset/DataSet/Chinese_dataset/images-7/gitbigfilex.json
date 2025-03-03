@@ -5,6 +5,7 @@
   "datamaplist": [
     "dataset\\DataSet\\Chinese_dataset\\images-7\\datamap.txt"
   ],
+  "filemd5_cachesize": 100000,
   "ftpconfig": {
     "host": "10.12.172.128",
     "pass": "35218764",

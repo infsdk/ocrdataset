@@ -185,7 +185,10 @@ def mainidx(idxfile):
         "others": []
       }
     }
-    writefileJson(os.path.join(idxdir, "gitbigfilex.json"), fjson)
+    fjsonfile = os.path.join(idxdir, "gitbigfilex.json")
+    if os.path.exists(fjsonfile):
+        fjson = readfileJson(fjsonfile)
+    writefileJson(fjsonfile, fjson)
     print(fjson["mynote"])
 
 def main():
