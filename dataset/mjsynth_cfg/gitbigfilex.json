@@ -28,7 +28,21 @@
   "timeout_reserved_note": "不会清理最新的 10000 个文件夹（保底保留文件夹个数）。",
   "upload": {
     "comment": "这个节点是程序自动维护的，不要修改。上面的 'others' 字段支持配置文件夹。",
-    "count": 55636,
-    "others": []
+    "count": 13,
+    "others": [
+      "dataset\\mjsynth_cfg\\all.k00.txt",
+      "dataset\\mjsynth_cfg\\all.k01.txt",
+      "dataset\\mjsynth_cfg\\all.kmerge.txt",
+      "dataset\\mjsynth_cfg\\all.txt",
+      "dataset\\mjsynth_cfg\\annotation.txt",
+      "dataset\\mjsynth_cfg\\annotation_test.txt",
+      "dataset\\mjsynth_cfg\\annotation_train.txt",
+      "dataset\\mjsynth_cfg\\annotation_val.txt",
+      "dataset\\mjsynth_cfg\\imlist.txt",
+      "dataset\\mjsynth_cfg\\lexicon.txt",
+      "dataset\\mjsynth_cfg\\test.txt",
+      "dataset\\mjsynth_cfg\\train.txt",
+      "dataset\\mjsynth_cfg\\val.txt"
+    ]
   }
 }
