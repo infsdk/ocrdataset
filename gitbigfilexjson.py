@@ -195,6 +195,8 @@ def main():
         print("echo", idx, idxfile, ">", "mytask.txt")
         mainidx(idxfile)
 
+# git@github.com:infsdk/ocrdataset.git
+# python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /FirstUpload /QuickUpload /NoTipInfo /NoCheckFile dataset\\Art
 if __name__ == "__main__":
     main()
     print("ok")
