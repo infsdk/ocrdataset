@@ -28,7 +28,11 @@
   "timeout_reserved_note": "不会清理最新的 10000 个文件夹（保底保留文件夹个数）。",
   "upload": {
     "comment": "这个节点是程序自动维护的，不要修改。上面的 'others' 字段支持配置文件夹。",
-    "count": 55636,
-    "others": []
+    "count": 3,
+    "others": [
+      "dataset\\DataSet\\config\\data_test.txt",
+      "dataset\\DataSet\\config\\data_train.txt",
+      "dataset\\DataSet\\config\\labels.txt"
+    ]
   }
 }
