@@ -142,6 +142,28 @@ I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\ReCTS\datamap.txt
 I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\SROIE2019\datamap.txt
 I:\ocr_data\所有数据集一起压缩\merge\merge~\dataset\SynthText800k\datamap.txt"""
 
+def getidxmap(datamapfile):
+    from pythonx.gitbigfileftp import parseLine
+
+    dtlist = readfileLines(datamapfile)
+    retdata = {}
+    for dtline in dtlist:
+        dtpath, dtmd5, dtsize, dtosspath = parseLine(dtline)
+        if dtpath.endswith("/datamap.txt"): continue
+        retdata[dtpath] = dtmd5
+    return retdata
+        
+def checkidx(idxfile):
+    idxfilebackup = idxfile+".backup"
+    from pythonx.gitbigfileftp import parseLine
+
+    xdata = getidxmap(idxfile)
+    ydata = getidxmap(idxfilebackup)
+    print(len(xdata), len(ydata))
+    print(set(xdata.keys()) - set(ydata.keys()))
+    print(set(ydata.keys()) - set(xdata.keys()))
+    return jsondumps(xdata) == jsondumps(ydata)
+            
 def mainidx(idxfile):
     idxdir = os.path.dirname(idxfile)
     gitroot = r"I:\ocr_data\所有数据集一起压缩\merge\merge~"
@@ -211,8 +233,11 @@ def main():
     idxlist = page.strip().split("\n")
     for idx, idxfile in enumerate(idxlist):
         # echo 你好，世界 > C:\path\to\file.txt
-        print("echo", idx, idxfile.replace("\\", "/"), ">", "mytask.txt")
-        mainidx(idxfile)
+        #print("echo", idx, idxfile.replace("\\", "/"), ">", "mytask.txt")
+        if not checkidx(idxfile):
+            colorPrint(idxfile)
+        else:
+            print(idxfile)
 
 # git@github.com:infsdk/ocrdataset.git
 # python3 E:/kSource/pythonx/gitbigfileftp.py /UploadLocal /FirstUpload /QuickUpload /NoTipInfo /NoCheckFile dataset\\Art
