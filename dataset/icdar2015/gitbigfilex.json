@@ -8,7 +8,7 @@
   "filemd5_cachesize": 10000,
   "ftpconfig": {
     "host": "10.12.172.128",
-    "pass": "35218764",
+    "pypass": "OCRDATA_FTP_PASSR_KEY",
     "pypass_upload": "OCRDATA_FTP_PASS_KEY",
     "user": "ftp_readonly",
     "user_upload": "ftp_readwrite"

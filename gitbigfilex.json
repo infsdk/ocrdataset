@@ -4,7 +4,7 @@
   "copylist_note": "上传前，须要拷贝的文件列表，每个的格式是：['fromfile', 'tofile']。",
   "ftpconfig": {
     "host": "10.12.172.128",
-    "pass": "35218764",
+    "pypass": "OCRDATA_FTP_PASSR_KEY",
     "pypass_upload": "OCRDATA_FTP_PASS_KEY",
     "user": "ftp_readonly",
     "user_upload": "ftp_readwrite"
