@@ -9,3 +9,6 @@ tempdir
 /version
 /datamap.txt
 /version.txt
+*_gitbigfilex.tmp
+*_gitbigfilex.zip
+*.txt.backup
