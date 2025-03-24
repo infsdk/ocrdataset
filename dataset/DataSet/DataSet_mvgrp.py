@@ -23,11 +23,11 @@ def mysplit(rootdir, count):
         tdir = "{}-{}".format(rootdir, i)
         if not os.path.exists(tdir):
             os.makedirs(tdir)
-            
+
         destination = os.path.join("{}-{}".format(rootdir, i))
         tmp = os.path.relpath(destination, ".")
         print([tmp, tmp], ",")
-            
+
     for ifile in os.listdir(rootdir):
         source = os.path.join(rootdir, ifile)
         i = int("".join(re.findall("[0-9]+", ifile)), 10) % count
@@ -39,10 +39,9 @@ def mysplit(rootdir, count):
 def main():
     rootdir = r"G:\BaiduNetdiskDownload\所有数据集一起压缩\merge\merge~\dataset\DataSet\Chinese_dataset\images"
     mysplit(rootdir, 10) # 每个大概 10 万。
-    
+
     rootdir = r"G:\BaiduNetdiskDownload\所有数据集一起压缩\merge\merge~\dataset\DataSet\Synthetic_Chinese_String_Dataset\images"
     mysplit(rootdir, 36) # 每个大概 10 万。
 
 if __name__ == "__main__":
     main()
-    

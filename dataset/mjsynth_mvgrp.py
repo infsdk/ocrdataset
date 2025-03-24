@@ -32,7 +32,7 @@ def main():
 
 def main2():
     rootdir = r"G:\BaiduNetdiskDownload\所有数据集一起压缩\merge\merge~\dataset\mjsynth\imgs"
-    
+
     for dir in os.listdir(rootdir):
         #print(dir)
         if re.findall("^[0-9]+$", dir):
@@ -40,7 +40,7 @@ def main2():
             #print(num)
             idx = (num - 1) // 50
             todir = "%d~%d" % (idx * 50 + 1, idx * 50 + 50)
-            
+
             oldpos = os.path.join(rootdir, dir)
             newpos = os.path.join(rootdir, todir, dir)
             print(dir, os.path.join(todir, dir))
@@ -53,4 +53,3 @@ def main2():
 
 if __name__ == "__main__":
     main()
-    

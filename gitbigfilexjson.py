@@ -152,7 +152,7 @@ def getidxmap(datamapfile):
         if dtpath.endswith("/datamap.txt"): continue
         retdata[dtpath] = dtmd5
     return retdata
-        
+
 def checkidx(idxfile):
     idxfilebackup = idxfile+".backup"
     from pythonx.gitbigfileftp import parseLine
@@ -163,7 +163,7 @@ def checkidx(idxfile):
     print(set(xdata.keys()) - set(ydata.keys()))
     print(set(ydata.keys()) - set(xdata.keys()))
     return jsondumps(xdata) == jsondumps(ydata)
-            
+
 def mainidx(idxfile):
     idxdir = os.path.dirname(idxfile)
     gitroot = r"I:\ocr_data\所有数据集一起压缩\merge\merge~"
@@ -172,7 +172,7 @@ def mainidx(idxfile):
     reldirb = os.path.relpath(gitroot, idxdir)
     #print("reldir", reldir)
     #print("reldirb", reldirb)
-    
+
     true = True
     fjson = {
       "autopinyin": true,
@@ -207,13 +207,13 @@ def mainidx(idxfile):
         "others": []
       }
     }
-    
+
     cdx, mynote = fjson["mynote"].split(" & python3 ")
     print(cdx.replace("\\", "/"))
     print("call", "python3", mynote.replace("\\", "/"))
-    
+
     fjsonx = fjson
-    
+
     fjsonfile = os.path.join(idxdir, "gitbigfilex.json")
     if os.path.exists(fjsonfile):
         fjson = readfileJson(fjsonfile)
